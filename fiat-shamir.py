@@ -59,8 +59,6 @@ def fiat_shamir(p,q,s,it):
 			print("COMPROBAMOS: "+str((y**2)%n)+"="+str(a));
 		else:
 			y = (int(it_val[i]) * int(s))%n;
-			print(v);
-			print(a);
 			print("COMPROBAMOS: "+str((y**2)%n)+"="+str((a * v)%n)); 
 
 

@@ -40,17 +40,20 @@ def fiat_shamir(p,q,s,it):
 	it_e = [];
 
 	it_val = [];
+
+	x = in_x();
+	it_val += [x];
 	for i in range(0,int(it)):
-		x = in_x();
 		e = in_e();
-		it_val += [x];
 		it_e += [e];
 
 	for i in range(0,int(it)):
 		a = (int((it_val[i]))**2)%n;
-		v = s ** 2;
+		it_val += [a];
+		v = (s ** 2)%n;
 		print("N: "+str(n));
 		print("V: "+str(v));
+		print("X: "+str(it_val[i]));
 
 		if(int(it_e[i]) == 0):
 
@@ -66,7 +69,7 @@ def fiat_shamir(p,q,s,it):
 
 
 
-fiat_shamir(7,5,3,2)
+fiat_shamir(977,983,43215,3)
 
 #Entrada:
 #a. p=7, q=5
